@@ -20,7 +20,7 @@ export const Product = ({product,card,setCard }) => {
     <div className="details">
         <h3>{name}</h3>
         <p>Price rs:{product.amt}</p>
-        {card.includes(product)?
+        {card.some((c) => c.id === product.id) ?
           <button className='btn-remove' onClick={removeCart}>remove from cart</button> :
           <button onClick={addCart}>Add to cart</button>
         }

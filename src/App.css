@@ -1,13 +1,60 @@
-.container{
-  padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.name{
-  font-size: 20px;
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #fcfcfc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  min-height: calc(100vh - 80px); /* Subtract header height approx */
+}
+
+.name {
+  padding: 3rem 0;
   text-align: center;
-  color: #888;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-top: 1px solid #eee;
 }
 
-span {
-  color: rgba(2, 113, 113, 0.879);
+.name span {
+  color: #f53d2d;
+  font-weight: 800;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product, .auth-card, .card-product {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f53d2d;
 }
